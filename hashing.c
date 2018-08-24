@@ -4,9 +4,9 @@ int main(void)
 {
     unsigned int t = 0;
     scanf("%u", &t);
-    while (t--)
+    while (t > 0)
     {
-        unsigned long long a = 0, b = 0, x = 0, n = 0, c = 0, d = 0, m=0, contador = 0;
+        unsigned long long a = 0, b = 0, x = 0, n = 0, c = 0, d = 0, m = 0, contador = 0;
         scanf("%llu %llu %llu %llu %llu %llu %llu", &a, &b, &x, &n, &c, &d, &m);
         for(unsigned long long i = 0; i <= n; i++)
         {
@@ -14,10 +14,12 @@ int main(void)
             if ((c <= hash_function) && (hash_function <= d))
             {
                 contador++;
-            };
-        };
+            }
+        }
         printf("%llu\n", contador);
         contador = 0;
-    };
+        t--;
+    }
     return 0;
 }
+
